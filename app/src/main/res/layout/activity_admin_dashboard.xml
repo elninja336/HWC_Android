@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F2F2F2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Admin Dashboard"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#2E7D32"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Manage Customer -->
+            <LinearLayout
+                android:id="@+id/cardManageCustomer"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:background="#FFEBEE"
+                android:elevation="6dp"
+                android:gravity="center_vertical"
+                android:padding="20dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@android:drawable/ic_menu_myplaces"
+                    app:tint="#D32F2F" />
+
+                <TextView
+                    android:text="Manage Customer"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#D32F2F"
+                    android:layout_marginStart="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Manage Schedule -->
+            <LinearLayout
+                android:id="@+id/cardManageSchedule"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:background="#E3F2FD"
+                android:elevation="6dp"
+                android:gravity="center_vertical"
+                android:padding="20dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@android:drawable/ic_menu_agenda"
+                    app:tint="#1976D2" />
+
+                <TextView
+                    android:text="Manage Schedule"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#1976D2"
+                    android:layout_marginStart="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Manage Payment -->
+            <LinearLayout
+                android:id="@+id/cardManagePayment"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:background="#FFF8E1"
+                android:elevation="6dp"
+                android:gravity="center_vertical"
+                android:padding="20dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@android:drawable/ic_menu_save"
+                    app:tint="#FFA000" />
+
+                <TextView
+                    android:text="Manage Payment"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFA000"
+                    android:layout_marginStart="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Manage Extra Pickup -->
+            <LinearLayout
+                android:id="@+id/cardManageExtraPickup"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:background="#F3E5F5"
+                android:elevation="6dp"
+                android:gravity="center_vertical"
+                android:padding="20dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@android:drawable/ic_menu_send"
+                    app:tint="#8E24AA" />
+
+                <TextView
+                    android:text="Manage Extra Pickup"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#8E24AA"
+                    android:layout_marginStart="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Manage Employee -->
+            <LinearLayout
+                android:id="@+id/cardManageEmployee"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:background="#E8F5E9"
+                android:elevation="6dp"
+                android:gravity="center_vertical"
+                android:padding="20dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@android:drawable/ic_menu_manage"
+                    app:tint="#388E3C" />
+
+                <TextView
+                    android:text="Manage Employee"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#388E3C"
+                    android:layout_marginStart="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

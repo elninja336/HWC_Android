@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:gravity="center_vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCustomerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Customer: John Doe"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDayOfWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Day of Week: Monday"
+            android:textColor="#444" />
+
+        <TextView
+            android:id="@+id/tvNextCollection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next Collection: 2025-07-01"
+            android:textColor="#444" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnEditSchedule"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@android:drawable/ic_menu_edit"
+        android:contentDescription="Edit"
+        android:background="@android:color/transparent"
+        app:tint="#4CAF50" />
+
+    <ImageButton
+        android:id="@+id/btnDeleteSchedule"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@android:drawable/ic_menu_delete"
+        android:contentDescription="Delete"
+        android:background="@android:color/transparent"
+        app:tint="#F44336" />
+
+</LinearLayout>

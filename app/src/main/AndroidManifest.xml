@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/home_trash"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/home_trash"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HouseWasteCollection"
+        tools:targetApi="31">
+        <activity
+            android:name=".CustomerDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddExtraPickupActivity"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".ui.login.AddExtraPickupActivity" -->
+        <!-- android:exported="false" -->
+        <!-- android:label="@string/title_activity_add_extra_pickup" /> -->
+        <activity
+            android:name=".ExtraPickupManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddPaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddEmployeeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WasteScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PickupRequestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EmployeeManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddCustomerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

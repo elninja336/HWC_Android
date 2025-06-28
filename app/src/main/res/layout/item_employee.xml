@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:gravity="center_vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvEmpFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name: Ali Employee"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/tvEmpEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email: ali@company.com"
+            android:textColor="#444" />
+
+        <TextView
+            android:id="@+id/tvEmpPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone: 0712..."
+            android:textColor="#444" />
+
+        <TextView
+            android:id="@+id/tvEmpArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Assigned Area: Mfenesini"
+            android:textColor="#444" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnEditEmployee"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@android:drawable/ic_menu_edit"
+        android:contentDescription="Edit"
+        android:background="@android:color/transparent"
+        app:tint="#4CAF50" />
+
+    <ImageButton
+        android:id="@+id/btnDeleteEmployee"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@android:drawable/ic_menu_delete"
+        android:contentDescription="Delete"
+        android:background="@android:color/transparent"
+        app:tint="#F44336" />
+
+</LinearLayout>
