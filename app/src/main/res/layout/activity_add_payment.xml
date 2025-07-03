@@ -8,7 +8,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -17,13 +20,17 @@
             android:gravity="center"
             android:text="Add Payment"
             android:textColor="#4CAF50"
-            android:textSize="22sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/spinnerCustomer"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_background"
+            android:padding="8dp"
+            android:spinnerMode="dropdown" />
 
         <EditText
             android:id="@+id/etAmount"
@@ -31,32 +38,39 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:hint="Amount (TZS)"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp" />
 
         <Spinner
             android:id="@+id/spinnerPaymentType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp" />
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_background"
+            android:padding="8dp"
+            android:spinnerMode="dropdown" />
 
         <Spinner
             android:id="@+id/spinnerStatus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp" />
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_background"
+            android:padding="8dp"
+            android:spinnerMode="dropdown" />
 
         <TextView
             android:id="@+id/tvPaymentDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:textColor="#444444"
             android:textSize="16sp"
             android:textStyle="italic"
             android:gravity="center"
             android:text="Date: " />
-
 
         <Button
             android:id="@+id/btnSave"
@@ -71,7 +85,7 @@
             android:id="@+id/btnCancel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="8dp"
             android:backgroundTint="#808080"
             android:text="Cancel"
             android:textColor="#FFFFFF" />

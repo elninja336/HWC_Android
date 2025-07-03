@@ -2,6 +2,7 @@ package com.example.housewastecollection;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -28,6 +29,8 @@ public class CustomerDashboardActivity extends AppCompatActivity {
 
     Button btnEditProf, btnViewExtraPickup, btnAddExtraPickup;
     Button btnViewPayments, btnAddPayment;
+    Button btnLogout;
+
 
     DatabaseHelper dbHelper;
     int customerId;
@@ -39,6 +42,27 @@ public class CustomerDashboardActivity extends AppCompatActivity {
 
         dbHelper = new DatabaseHelper(this);
         customerId = getIntent().getIntExtra("customer_id", -1);
+        btnLogout = findViewById(R.id.btnLogout);
+
+
+        btnLogout.setOnClickListener(v -> {
+            new AlertDialog.Builder(CustomerDashboardActivity.this)
+                    .setTitle("Logout")
+                    .setMessage("Are you sure you want to logout?")
+                    .setPositiveButton("Yes", (dialog, which) -> {
+                        // Optional: Clear session or data
+
+                        // Go to login activity
+                        Intent intent = new Intent(CustomerDashboardActivity.this, LoginActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Clear back stack
+                        startActivity(intent);
+                        finish(); // Close dashboard
+                    })
+                    .setNegativeButton("No", null)
+                    .show();
+        });
+
+
 
         // View bindings
         txtFullName = findViewById(R.id.txtFullName);
@@ -46,7 +70,7 @@ public class CustomerDashboardActivity extends AppCompatActivity {
         txtPhone = findViewById(R.id.txtPhone);
         txtHouseNo = findViewById(R.id.txtHouseNo);
         txtDistrict = findViewById(R.id.txtDistrict);
-        txtRegDate = findViewById(R.id.txtRegDate);
+//        txtRegDate = findViewById(R.id.txtRegDate);
 
         txtCurrCollection = findViewById(R.id.txtCurrCollection);
         txtPrevCollection = findViewById(R.id.txtPrevCollection);
@@ -82,7 +106,7 @@ public class CustomerDashboardActivity extends AppCompatActivity {
             txtPhone.setText("Phone: " + cursor.getString(cursor.getColumnIndexOrThrow("phone")));
             txtHouseNo.setText("House No: " + cursor.getString(cursor.getColumnIndexOrThrow("house_no")));
             txtDistrict.setText("District: " + cursor.getString(cursor.getColumnIndexOrThrow("district")));
-            txtRegDate.setText("Registered: " + cursor.getString(cursor.getColumnIndexOrThrow("registration_date")));
+//            txtRegDate.setText("Registered: " + cursor.getString(cursor.getColumnIndexOrThrow("registration_date")));
         }
         cursor.close();
     }

@@ -47,6 +47,10 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHo
         holder.tvPhone.setText("Phone: " + customer.getPhone());
         holder.tvHouseNo.setText("House No: " + customer.getHouseNo());
         holder.tvDistrict.setText("District: " + customer.getDistrict());
+        holder.tvPassword.setText("Password: " + customer.getPassword());
+
+
+
 
         holder.btnEdit.setOnClickListener(v -> {
             if (listener != null) listener.onEdit(customer);
@@ -68,7 +72,7 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHo
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvFullName, tvEmail, tvPhone, tvHouseNo, tvDistrict;
+        TextView tvFullName, tvEmail, tvPhone, tvHouseNo, tvDistrict, tvPassword;
         ImageButton btnEdit, btnDelete;
 
         public ViewHolder(@NonNull View itemView) {
@@ -78,6 +82,7 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHo
             tvPhone = itemView.findViewById(R.id.tvPhone);
             tvHouseNo = itemView.findViewById(R.id.tvHouseNo);
             tvDistrict = itemView.findViewById(R.id.tvDistrict);
+            tvPassword = itemView.findViewById(R.id.tvPassword);
             btnEdit = itemView.findViewById(R.id.btnEdit);
             btnDelete = itemView.findViewById(R.id.btnDelete);
         }

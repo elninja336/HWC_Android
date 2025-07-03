@@ -2,12 +2,28 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#F9F9F9">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="Add Schedule"
+            android:textColor="#4CAF50"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -15,12 +31,14 @@
             android:text="Select Customer"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:paddingBottom="8dp"/>
+            android:paddingBottom="8dp" />
 
         <Spinner
             android:id="@+id/spinnerCustomer"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="8dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -29,12 +47,14 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:paddingTop="16dp"
-            android:paddingBottom="8dp"/>
+            android:paddingBottom="8dp" />
 
         <Spinner
             android:id="@+id/spinnerDayOfWeek"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="8dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -50,7 +70,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="date"
-            android:hint="2025-06-30" />
+            android:hint="2025-06-30"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,14 +85,18 @@
                 android:id="@+id/btnCancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cancel" />
+                android:text="Cancel"
+                android:backgroundTint="#808080"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/btnSave"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Save"
-                android:layout_marginStart="16dp" />
+                android:layout_marginStart="16dp"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
 
     </LinearLayout>

@@ -86,6 +86,7 @@ public class CustomerManagementActivity extends AppCompatActivity {
                 customer.setPhone(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.CUSTOMER_PHONE)));
                 customer.setHouseNo(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.CUSTOMER_HOUSE_NO)));
                 customer.setDistrict(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.CUSTOMER_DISTRICT)));
+                customer.setPassword(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.CUSTOMER_PASSWORD)));
                 customer.setRegistrationDate(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.CUSTOMER_REGISTRATION_DATE)));
                 customerList.add(customer);
             } while (cursor.moveToNext());

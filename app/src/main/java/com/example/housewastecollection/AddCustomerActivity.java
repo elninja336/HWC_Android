@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class AddCustomerActivity extends AppCompatActivity {
 
-    EditText etFullName, etEmail, etPhone, etHouseNo, etDistrict;
+    EditText etFullName, etEmail, etPhone, etHouseNo, etDistrict, etPassword;
     Button btnSave, btnCancel;
 
     DatabaseHelper dbHelper;
@@ -34,8 +34,9 @@ public class AddCustomerActivity extends AppCompatActivity {
         etPhone = findViewById(R.id.etPhone);
         etHouseNo = findViewById(R.id.etHouseNo);
         etDistrict = findViewById(R.id.etDistrict);
+        etPassword = findViewById(R.id.etPassword);
         btnSave = findViewById(R.id.btnSave);
-        btnCancel = findViewById(R.id.btnCencel);
+        btnCancel = findViewById(R.id.btnCancel);
 
         // Check if we are editing
         customerId = getIntent().getIntExtra("customer_id", -1);
@@ -64,6 +65,7 @@ public class AddCustomerActivity extends AppCompatActivity {
             etPhone.setText(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.CUSTOMER_PHONE)));
             etHouseNo.setText(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.CUSTOMER_HOUSE_NO)));
             etDistrict.setText(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.CUSTOMER_DISTRICT)));
+            etPassword.setText(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.CUSTOMER_PASSWORD)));
         }
         cursor.close();
     }
@@ -74,6 +76,7 @@ public class AddCustomerActivity extends AppCompatActivity {
         String phone = etPhone.getText().toString().trim();
         String houseNo = etHouseNo.getText().toString().trim();
         String district = etDistrict.getText().toString().trim();
+        String password = etPassword.getText().toString().trim();
 
         if (fullName.isEmpty() || phone.isEmpty() || email.isEmpty()) {
             Toast.makeText(this, "Name, email and Phone are required", Toast.LENGTH_SHORT).show();
@@ -87,6 +90,7 @@ public class AddCustomerActivity extends AppCompatActivity {
         values.put(DatabaseHelper.CUSTOMER_PHONE, phone);
         values.put(DatabaseHelper.CUSTOMER_HOUSE_NO, houseNo);
         values.put(DatabaseHelper.CUSTOMER_DISTRICT, district);
+        values.put(DatabaseHelper.CUSTOMER_PASSWORD, password);
 
         if (customerId != -1) {
             // Update mode

@@ -8,7 +8,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -17,14 +20,18 @@
             android:gravity="center"
             android:text="Add Extra Pickup"
             android:textColor="#4CAF50"
-            android:textSize="22sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/spinnerCustomer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:prompt="@string/select_customer" />/>
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_background"
+            android:padding="8dp"
+            android:spinnerMode="dropdown"
+            android:prompt="@string/select_customer" />
 
         <EditText
             android:id="@+id/etExtraCharge"
@@ -32,7 +39,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:hint="Extra Charge (TZS)"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp" />
+
         <EditText
             android:id="@+id/etDescription"
             android:layout_width="match_parent"
@@ -41,17 +51,19 @@
             android:inputType="textMultiLine"
             android:minLines="2"
             android:gravity="top"
-            android:layout_marginTop="16dp" />
-
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp" />
 
         <Spinner
             android:id="@+id/spinnerStatus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_background"
+            android:padding="8dp"
+            android:spinnerMode="dropdown"
             android:prompt="@string/select_status" />
-
-
 
         <Button
             android:id="@+id/btnSave"
@@ -66,7 +78,7 @@
             android:id="@+id/btnCancel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="8dp"
             android:backgroundTint="#808080"
             android:text="Cancel"
             android:textColor="#FFFFFF" />

@@ -8,31 +8,39 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp">
 
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:layout_marginBottom="24dp"
+            android:layout_height="wrap_content"
             android:text="Add New Customer"
+            android:textAlignment="center"
             android:textColor="#4CAF50"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
 
+        <!-- Common style for EditTexts -->
         <EditText
             android:id="@+id/etFullName"
             android:hint="Full Name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginTop="8dp" />
 
         <EditText
             android:id="@+id/etEmail"
             android:hint="Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
             android:layout_marginTop="12dp"/>
 
         <EditText
@@ -40,6 +48,8 @@
             android:hint="Phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
             android:layout_marginTop="12dp"/>
 
         <EditText
@@ -47,6 +57,8 @@
             android:hint="House Number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
             android:layout_marginTop="12dp"/>
 
         <EditText
@@ -54,6 +66,17 @@
             android:hint="District"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:hint="Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
             android:layout_marginTop="12dp"/>
 
         <Button
@@ -64,12 +87,13 @@
             android:layout_marginTop="20dp"
             android:backgroundTint="#4CAF50"
             android:textColor="#FFFFFF"/>
+
         <Button
-            android:id="@+id/btnCencel"
-            android:text="Cencel"
+            android:id="@+id/btnCancel"
+            android:text="Cancel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="8dp"
             android:backgroundTint="#808080"
             android:textColor="#FFFFFF"/>
     </LinearLayout>

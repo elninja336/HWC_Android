@@ -57,35 +57,7 @@
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
-            <!-- Manage Schedule -->
-            <LinearLayout
-                android:id="@+id/cardManageSchedule"
-                android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:layout_margin="10dp"
-                android:orientation="horizontal"
-                android:background="#E3F2FD"
-                android:elevation="6dp"
-                android:gravity="center_vertical"
-                android:padding="20dp"
-                android:clickable="true"
-                android:focusable="true">
 
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:src="@android:drawable/ic_menu_agenda"
-                    app:tint="#1976D2" />
-
-                <TextView
-                    android:text="Manage Schedule"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="#1976D2"
-                    android:layout_marginStart="16dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
 
             <!-- Manage Payment -->
             <LinearLayout
@@ -177,7 +149,51 @@
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
+            <!-- Manage Schedule -->
+            <LinearLayout
+                android:id="@+id/cardManageSchedule"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:background="#E3F2FD"
+                android:elevation="6dp"
+                android:gravity="center_vertical"
+                android:padding="20dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@android:drawable/ic_menu_agenda"
+                    app:tint="#1976D2" />
+
+                <TextView
+                    android:text="Manage Schedule"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#1976D2"
+                    android:layout_marginStart="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="#F44336"
+                android:drawableLeft="@android:drawable/ic_lock_power_off"
+                android:padding="12dp"/>
+
+
         </LinearLayout>
+
 
 
     </LinearLayout>

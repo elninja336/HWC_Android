@@ -48,8 +48,16 @@
             android:id="@+id/tvDistrict"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="District: Chake Chake"
+            android:text="District: Magharib 'B' "
             android:textColor="#444" />
+
+        <TextView
+            android:id="@+id/tvPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password: ********"
+            android:textColor="#444" />
+
     </LinearLayout>
 
 
